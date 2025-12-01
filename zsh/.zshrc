@@ -130,12 +130,14 @@ alias wechat='wechat.sh'
 
 # tmux
 # fish
- "$HOME/.local/bin/env"
 if [[ -f "$HOME/.local/bin/env" ]]; then
     source "$HOME/.local/bin/env"
+fi
 
 [ -f /opt/miniconda3/etc/profile.d/conda.sh ]
 
 export PATH="/usr/local/cuda/bin:$PATH"
 export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
 export CUDA_HOME="/usr/local/cuda"
+
+
