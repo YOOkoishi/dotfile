@@ -4,6 +4,8 @@
 " ============================================================================
 
 set nocompatible
+set encoding=utf-8
+set fileencoding=utf-8
 
 " ============================================================================
 " 插件管理 - vim-plug
@@ -127,8 +129,6 @@ silent! call mkdir(&undodir, 'p', 0700)
 set mouse=a                 " 鼠标支持
 set clipboard=unnamedplus   " 系统剪贴板
 set noerrorbells visualbell t_vb=
-set encoding=utf-8
-set fileencoding=utf-8
 
 " ============================================================================
 " 快捷键 (Leader = 空格)
@@ -162,6 +162,12 @@ vnoremap > >gv
 
 " Airline
 let g:airline_powerline_fonts = 0
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+let g:airline_symbols.linenr = 'Ln'
+let g:airline_symbols.maxlinenr = ''
+let g:airline_symbols.colnr = 'Col'
 
 " NERDTree
 let NERDTreeShowHidden = 1
